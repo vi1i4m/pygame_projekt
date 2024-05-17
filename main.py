@@ -1,22 +1,35 @@
 import pygame
+import sys
 
 WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 1280
 
-pygame.init()
-screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-clock = pygame.time.Clock()
-running = True
 
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+class Game:
+    def __init__(self):
+        pygame.init()
+        self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+        self.clock = pygame.time.Clock()
 
-    screen.fill("blue")
+    def run(self):
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
 
-    pygame.display.flip()
+            self.screen.fill("blue")
+            pygame.display.set_caption("Skuska")
 
-    clock.tick(60)
+            pygame.display.flip()
 
-pygame.quit()
+            self.clock.tick(60)
+
+
+
+if __name__ == "__main__":
+    hra = Game()
+    hra.run()
+
+
+
