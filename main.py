@@ -68,7 +68,7 @@ class MainMenu:
 
     def run(self):
         self.screen.blit(self.bg, (0,0))
-        pygame.display.set_caption("Black Boy)
+        pygame.display.set_caption("Black Boy")
         while True:
 
             MENU_MOUSE_POS = pygame.mouse.get_pos()
