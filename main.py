@@ -14,6 +14,9 @@ class Game:
         pygame.init()
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.clock = pygame.time.Clock()
+        self.icon = pygame.image.load("assets/blackboy_icon.png")
+        pygame.display.set_icon(self.icon)
+
 
     def run(self):
         while True:
