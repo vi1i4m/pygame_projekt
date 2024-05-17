@@ -76,9 +76,9 @@ class MainMenu:
             MENU_TEXT = get_font(100).render("BLACK BOY", True, "#000000")
             MENU_RECT = MENU_TEXT.get_rect(center=(640, 100))
 
-            PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(640, 250), text_input="PLAY", font=get_font(75), base_color="#cc7f00", hovering_color="White")
-            OPTIONS_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(640, 350), text_input="OPTIONS", font=get_font(75), base_color="#cc7f00",hovering_color="White")
-            QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(640, 450), text_input="QUIT", font=get_font(75), base_color="#cc7f00", hovering_color="White")
+            PLAY_BUTTON = Button(image=None, pos=(640, 250), text_input="PLAY", font=get_font(75), base_color="#cc7f00", hovering_color="White")
+            OPTIONS_BUTTON = Button(image=None, pos=(640, 350), text_input="OPTIONS", font=get_font(75), base_color="#cc7f00",hovering_color="White")
+            QUIT_BUTTON = Button(image=None, pos=(640, 450), text_input="QUIT", font=get_font(75), base_color="#cc7f00", hovering_color="White")
 
             self.screen.blit(MENU_TEXT, MENU_RECT)
 
